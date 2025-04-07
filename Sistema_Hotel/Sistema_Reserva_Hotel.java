@@ -31,13 +31,13 @@ public class Sistema_Reserva_Hotel {
 
         Reserva.getHospedes();
 
-        pagamento_pix.Realiza_pagamento(conta_do_R2.getPreçoFinal(), R2);
+        pagamento_pix.Realiza_pagamento(conta_do_R2.getPreçoFinal(), R2); // pagamento do segundo hospede realizado.
         pagamento_pix.Gera_recibo();
         R2.Finalizou_reserva();
-        Reserva.getHospedes();
+        Reserva.getHospedes(); // não há mais hospedes no hotel.
 
         Reserva R3 = new Reserva("cristina", "08718988610", 4);
         R3.Realizar_Reserva();
-        R3.Cancelar_Reserva();
+        R3.Cancelar_Reserva(); // cancelou a reserva.
     }
 }
