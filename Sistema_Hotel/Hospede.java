@@ -1,6 +1,6 @@
 package Sistema_Hotel;
 
-public class Hospede {
+public class Hospede {  // classe pai
     private String nome;
     private String CPF;
 
@@ -17,5 +17,12 @@ public class Hospede {
 
     public String getCPF () {
         return CPF;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 }

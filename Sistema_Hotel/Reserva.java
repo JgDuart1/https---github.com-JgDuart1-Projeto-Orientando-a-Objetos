@@ -1,15 +1,15 @@
 package Sistema_Hotel;
 
-public class Reserva extends Hospede {
+public class Reserva extends Hospede {  // realiza a reversa do hospede
     private int dias;
-    private static int contador_de_hospedes;
+    private static int contador_de_hospedes; // atributo estático para a contagem de hospedes no hotel "atualmente"
 
     public Reserva() {};
 
     public Reserva(String nome, String CPF, int dias) {
-        super(nome, CPF);
+        super(nome, CPF);  // constrói o hospede atraves da super classe
         this.dias = dias;
-        contador_de_hospedes++;
+        contador_de_hospedes++; 
     }
 
     public void Realizar_Reserva() {
@@ -29,7 +29,7 @@ public class Reserva extends Hospede {
         return dias;
     }
 
-    public static void getHospedes() {
+    public static void getHospedes() { // Metodo estático para vizualisar o número de hospedes no hotel.
         System.out.println("Há atualmente " + contador_de_hospedes + " hospedes no hotel.");;
     }
 }

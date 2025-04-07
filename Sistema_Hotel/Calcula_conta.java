@@ -1,6 +1,6 @@
 package Sistema_Hotel;
 
-public class Calcula_conta {
+public class Calcula_conta {   // Classe responsável por calcular a conta final do hospede, considerando somente diárias.
     private double preço_final;
     private Reserva reservista;
 

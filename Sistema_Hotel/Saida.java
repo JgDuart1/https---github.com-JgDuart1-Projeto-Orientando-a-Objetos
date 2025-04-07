@@ -1,6 +1,6 @@
 package Sistema_Hotel;
 
-public class Saida {
+public class Saida {  // registra a saida rotineira do hospede no hotel.
     private Reserva reservista;
     
     public Saida(Reserva R1) {

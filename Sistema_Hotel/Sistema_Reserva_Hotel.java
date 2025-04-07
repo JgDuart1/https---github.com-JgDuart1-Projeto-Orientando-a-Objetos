@@ -2,8 +2,9 @@ package Sistema_Hotel;
 
 public class Sistema_Reserva_Hotel {
     public static void main(String[] args) {
-        Pagamento pagamento_cartao = new Pagamento_cartao(); // Inicializando as 2 formas de pagamento para serem usadas mais tarde.
+        Pagamento pagamento_cartao = new Pagamento_cartao(); // Inicializando as 3 formas de pagamento para seu possivel uso posteriormente.
         Pagamento pagamento_pix = new Pagamento_pix();
+        Pagamento pagamento_dinheiro = new Pagamento_dinheiro();
 
         Reserva R1 = new Reserva("Lucio", "09099912319", 5);
         Entrada entrada_R1 = new Entrada(R1);
@@ -24,13 +25,13 @@ public class Sistema_Reserva_Hotel {
 
         Reserva.getHospedes(); // mostra quantos hospedes há no hotel atualmente.
 
-        pagamento_cartao.Realiza_pagamento(conta_do_R1.getPreçoFinal()); // pagamento do primeiro hospede realizado.
+        pagamento_cartao.Realiza_pagamento(conta_do_R1.getPreçoFinal(), R1); // pagamento do primeiro hospede realizado.
         pagamento_cartao.Gera_recibo();
         R1.Finalizou_reserva(); // não está mais no Hotel.
 
         Reserva.getHospedes();
 
-        pagamento_pix.Realiza_pagamento(conta_do_R2.getPreçoFinal());
+        pagamento_pix.Realiza_pagamento(conta_do_R2.getPreçoFinal(), R2);
         pagamento_pix.Gera_recibo();
         R2.Finalizou_reserva();
         Reserva.getHospedes();
