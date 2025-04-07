@@ -35,5 +35,9 @@ public class Sistema_Reserva_Hotel {
         pagamento_pix.Gera_recibo();
         R2.Finalizou_reserva();
         Reserva.getHospedes();
+
+        Reserva R3 = new Reserva("cristina", "08718988610", 4);
+        R3.Realizar_Reserva();
+        R3.Cancelar_Reserva();
     }
 }
